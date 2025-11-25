@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-  name: inube-registry-service
+    name: inube-registry-service
 
 eureka:
   client:
