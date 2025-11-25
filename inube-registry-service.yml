@@ -1,18 +1,18 @@
 server:
   port: 8106
-
+ 
 spring:
   application:
     name: inube-registry-service
-
+ 
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
   server:
     wait-time-in-ms-when-sync-empty: 0
-
-managment:
+ 
+management:
   endpoints:
     web:
       exposure:
@@ -20,7 +20,7 @@ managment:
   endpoint:
     health:
       show-details: always
-
+ 
 logging:
   level:
     org.springframework.cloud.config: DEBUG
