@@ -13,11 +13,11 @@ spring:
         - id: inube-auth-auth
           uri: lb://INUBE-AUTHENTICATION-SERVICE
           predicates:
-            - Path=/api/inube/auth/
+            - Path=/api/inube/auth/**
         - id: inube-auth-user
           uri: lb://INUBE-AUTHENTICATION-SERVICE
           predicates:
-            - Path=/api/inube/user/
+            - Path=/api/inube/user/**
         - id: inube-service
           uri: lb://INUBE-SERVICE
           predicates:
@@ -25,12 +25,12 @@ spring:
           filters:
             - AuthenticationFilter
 
-globalcors:
-  corsConfigurations:
-    '[/**]':
-      allowedOrigins: "*"
-      allowedMethods: "*"
-      allowedHeaders: "*"
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
 
 eureka:
   client:
