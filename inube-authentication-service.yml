@@ -19,15 +19,15 @@ spring:
   jwt:
     secret: e4b7f9d2a13c4efb92d7c31ae8f04c9bd3e27fa649c8d1e0b57a23cf8b9e41ac
 
-  eureka:
-    client:
-      serviceUrl:
-        defaultZone: http://localhost:8106/eureka/
-      registerWithEureka: true
-      fetchRegistry: true
-      healthcheck:
-        enabled: true
-    instance:
-      leaseRenewalIntervalInSeconds: 5
-      leaseExpirationDurationInSeconds: 5
-      preferIpAddress: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8106/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+    healthcheck:
+      enabled: true
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 5
+    preferIpAddress: true
