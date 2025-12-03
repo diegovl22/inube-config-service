@@ -10,20 +10,20 @@ spring:
           enable: false
           lower-case-service-id: true
       routes:
-        id: inube-auth-auth
-        uri: lb://INUBE-AUTHENTICATION-SERVICE
-        predicates:
-          - Path=/api/inube/auth/
-        id: inube-auth-user
-        uri: lb://INUBE-AUTHENTICATION-SERVICE
-        predicates:
-          - Path=/api/inube/user/
-        id: inube-service
-        uri: lb://INUBE-SERVICE
-        predicates:
-          - Path=/api/inube/service/**
-        filters:
-          - AuthenticationFilter
+        - id: inube-auth-auth
+          uri: lb://INUBE-AUTHENTICATION-SERVICE
+          predicates:
+            - Path=/api/inube/auth/
+        - id: inube-auth-user
+          uri: lb://INUBE-AUTHENTICATION-SERVICE
+          predicates:
+            - Path=/api/inube/user/
+        - id: inube-service
+          uri: lb://INUBE-SERVICE
+          predicates:
+            - Path=/api/inube/service/**
+          filters:
+            - AuthenticationFilter
 
 globalcors:
   corsConfigurations:
